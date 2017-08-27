@@ -16,6 +16,8 @@
   }
 }
 
+// ============= Image mixins =====================
+
 @mixin img-center {
 	display: block;
 	margin-left: auto;
@@ -24,6 +26,7 @@
 
 // ============= Themed color classes =============
 
+// UI theme colors for buttons, etc
 @mixin ui-colors($map) {
 	// $map = which color map to sort through	
 	@each $theme, $color in $map {
@@ -32,3 +35,47 @@
     	}
   	}
 }
+
+// Grid columns background colors
+@mixin grid-colors($map) {
+	// $map = which color map to sort through	
+	$i : 1; // temporary increment variable
+	@each $color in $map {
+		@include m("col--#{$i}") {
+      		background-color: $color;
+    	}
+		$i : $i + 1;
+  	}
+}
+
+// ============= Media Queries ====================
+
+@mixin mq($break) {
+	// $break = media size, accepts small, medium, and large only. 
+		// -any other value will throw an error
+	@if $break == "small" {
+	    @media (min-width: $brkpoint--sm) and (max-width: $brkpoint--md) {
+		   	@content;
+			}
+	} @else if $break == "medium" {
+		@media (min-width: $brkpoint--md + 1) {
+		  	@content;
+			}
+	} @else if $break == "large" {
+		@media (min-width: $brkpoint--lg) {
+			@content;
+			}
+	} @else {
+		@error "`#{$break}` is not an acceptable value. Must be 'small' 'medium' or 'large'. "
+	}
+}
+
+
+
+
+
+
+
+
+
+

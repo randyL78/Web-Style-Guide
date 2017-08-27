@@ -16,6 +16,9 @@ $font-weight--medium     : 400;
 $font-weight--bold       : 700;
 $font-weight--ultra-bold : 900;
 
+//		Font size
+$base__font-size	: 18px;
+$base__line-height	: 1.5;
 
 // =================Colors========================
 
@@ -70,10 +73,22 @@ $ui-colors: (
   	info    : $mauve
 );
 
-// ============= Typography ========================
+//	Grid Colors
 
-$base__font-size	: 18px;
-$base__line-height	: 1.5;
+$grid-colors: (
+	$pink-salmon,	
+	$mauve,				
+	$lavender,			
+	$harvest-gold,		
+	$granny-smith,		
+	$chetwode-blue,		
+	$copperfield,		
+	$neptune,			
+	$de-york,			
+	$malibu,
+	$turqouise,			
+	$mantis				
+);
 
 // ============= Borders ===========================
 
@@ -85,11 +100,10 @@ $brkpoint--sm    : 1px;
 $brkpoint--md    : 768px;
 $brkpoint--lg    : 1100px;
 
-// ============= Buttons ===========================
-
-$button--width	: 150px;
 
 // ============= Grid ==============================
+
+// Grid Structure, grid color variables located under colors
 
 $g-col-width    : 65px;
 $g-gutter-width : 20px;
