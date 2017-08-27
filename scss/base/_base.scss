@@ -1,0 +1,24 @@
+//////////////////////////////////////////////////
+//			Base styles   						//
+//////////////////////////////////////////////////
+
+// Set box sizing to include border and margin when calculating dimensions
+* {
+	box-sizing: border-box;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+//	Text
+.container {
+	color: palette(grey);
+  	font-size: $base__font-size;
+  	font-family: $font-family--primary;
+  	line-height: ($base__line-height * $base__font-size);
+	padding: 50px;
+}
+
+

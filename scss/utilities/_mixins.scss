@@ -1,0 +1,34 @@
+//////////////////////////////////////////////////
+//			Mixins 								//
+//////////////////////////////////////////////////
+
+
+// ============== BEM selectors ==================
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin img-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// ============= Themed color classes =============
+
+@mixin ui-colors($map) {
+	// $map = which color map to sort through	
+	@each $theme, $color in $map {
+    	@include m($theme) {
+      		background-color: $color;
+    	}
+  	}
+}

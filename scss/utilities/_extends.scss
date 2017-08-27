@@ -1,0 +1,36 @@
+//////////////////////////////////////////////////
+//			Placeholders						//
+//////////////////////////////////////////////////
+
+
+// =============== Helpers =======================
+
+// 		Clearfix
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// 		Center alignment
+
+%center-align {
+	text-align: center;
+}
+
+
+// =============== Buttons ======================
+
+%button {
+	@extend %center-align;
+	border-radius: $border--rounded-corners;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	border: 0;
+	color: $white;
+	text-transform: capitalize;
+}

@@ -1,0 +1,105 @@
+//////////////////////////////////////////////////
+//			Variables 							//
+//////////////////////////////////////////////////
+
+// ===============Fonts ==========================
+
+//	 	Font stack
+
+$font-family--primary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// 		Font weights
+
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+
+// =================Colors========================
+
+//		Base colors
+
+$white	: #fff;
+$black	: #101010;
+$grey	: #676767;
+
+//		Theme colors
+//			-color names chosen using "name that color" @ http://chir.ag/projects/name-that-color
+
+$pink-salmon		: #ff8f93;
+$mauve				: #BD9CFF;
+$lavender			: #CE86E9;
+$harvest-gold		: #E0B47C;
+$granny-smith		: #9DE997;
+$chetwode-blue		: #838EDC;
+$copperfield		: #D9856D;
+$neptune			: #78C0AB;
+$de-york			: #78C58F;
+$malibu				: #47DEFF;
+$turqouise			: #50E3C2;
+$mantis				: #7FD079;
+$vivid-tangerine	: #FF9C7E;
+
+//		Colors by usage
+
+$color-primary		: $turqouise;
+$color-secondary	: $malibu;
+
+// 		Color palettes
+
+$color-palettes: (
+	grey: (
+		xx-light : lighten($grey, 43%),
+		x-light  : lighten($grey, 35%),
+		light    : lighten($grey, 12%),
+		base     : $grey,
+		dark     : darken($grey, 8%),
+		x-dark   : darken($grey, 16%)
+    )
+);
+	
+// UI Colors
+
+$ui-colors: (
+ 	default : $color-secondary,
+  	success : $de-york,
+  	error   : $pink-salmon,
+  	warning : $vivid-tangerine,
+  	info    : $mauve
+);
+
+// ============= Typography ========================
+
+$base__font-size	: 18px;
+$base__line-height	: 1.5;
+
+// ============= Borders ===========================
+
+$border--rounded-corners	: 5px;
+
+// ============= Breakpoints =======================
+
+$brkpoint--sm    : 1px;
+$brkpoint--md    : 768px;
+$brkpoint--lg    : 1100px;
+
+// ============= Buttons ===========================
+
+$button--width	: 150px;
+
+// ============= Grid ==============================
+
+$g-col-width    : 65px;
+$g-gutter-width : 20px;
+$g-col-count    : 12;
+$g-cont-max-w   : 1200px;
+
+
+
+
+
+
+
+

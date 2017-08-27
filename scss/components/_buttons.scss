@@ -1,0 +1,12 @@
+//////////////////////////////////////////////////
+//		Butttons 		  						//
+//////////////////////////////////////////////////
+
+.btn {
+  @include ui-colors($ui-colors);
+}
+
+[class^="btn--"] {
+  @extend %button;
+  margin-bottom: em(20px, 14px); 
+}
