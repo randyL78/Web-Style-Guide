@@ -26,11 +26,85 @@
 
 %button {
 	@extend %center-align;
-	border-radius: $border--rounded-corners;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 100%;
 	border: 0;
 	color: $white;
-	text-transform: capitalize;
 }
+
+// =============== Links ========================
+
+%links {
+	text-decoration: none;
+	color: $color-secondary;
+}
+
+// =============== Images =======================
+// =============== Headlines ====================
+
+%hdln-prim {
+	@extend %center-align;
+	color: $color-primary;
+  	font-weight: $font-weight--medium;
+  	font-size: em(36px);
+  	line-height: ($base__line-height *.8);
+  	margin-top: 0;
+	@include mq(medium) {
+		text-align: left;
+	}
+
+}
+
+%hdln-sec {
+  	color: palette(grey, medium);
+  	font-weight: $font-weight--light;
+	font-size: em(20px);
+	margin-bottom: 15px;
+}
+
+// =============== Nav Items ====================
+
+
+%nav-item-horz {
+	@include mq(medium) {
+    	display: inline-block;
+    	margin: 0;
+  	}
+}
+
+%nav-item-link {
+  	font-weight: $font-weight--light;
+  	text-align: center;
+  	font-size: em(20px);
+  	display: block;
+	height:  54px;
+  	padding: em(10px) em(12px);
+	border-radius: $border--rounded-corners;
+
+  	@include mq(small) {
+    	padding-top: em(12px, 20px);
+    	padding-bottom: em(12px, 20px);
+		width: 200px;
+		margin-left: auto;
+		margin-right: auto;
+  	}
+}
+
+%nav-item-on {
+	font-weight: $font-weight--medium;
+	background-color: $color-primary;
+	color: $white;
+  	padding: em(10px) em(11.75px); // adjust padding for increased font weight
+	
+}
+
+
+
+
+
+
+
+
+
+

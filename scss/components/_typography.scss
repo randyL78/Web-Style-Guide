@@ -1,0 +1,25 @@
+//////////////////////////////////////////////////
+//			Typography  						//
+//////////////////////////////////////////////////
+
+
+// =============== Headlines ======================
+
+.headline {
+	&--primary {
+		@extend %hdln-prim;
+		+ p {
+			font-size: $base__font-size;
+			font-weight: 500;
+		}
+	}
+		&--secondary {
+		@extend %hdln-sec;
+	}
+}
+
+.link {
+	color: $color-secondary;
+	text-decoration: none;
+}
+

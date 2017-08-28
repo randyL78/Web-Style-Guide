@@ -24,6 +24,17 @@
 	margin-right: auto;
 }
 
+// ============= Flexbox Settings =================
+@mixin 	container-flex {
+	display: flex;
+	flex-direction: column;
+	@include mq(medium) {
+		flex-direction: row;
+		justify-content:space-between;
+	}
+}
+
+
 // ============= Themed color classes =============
 
 // UI theme colors for buttons, etc
@@ -41,8 +52,9 @@
 	// $map = which color map to sort through	
 	$i : 1; // temporary increment variable
 	@each $color in $map {
-		@include m("col--#{$i}") {
+		@include e("col--#{$i}") {
       		background-color: $color;
+			@extend %button;
     	}
 		$i : $i + 1;
   	}
@@ -71,9 +83,28 @@
 }
 
 
+// ============= Grid Columns ======================
 
+@mixin g-columns {
+  @for $i from 1 through $g-col-count {
+    $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
 
+    // Generate and output the column modifier classes 
+    &--#{$i} {
+      width: percentage($target / $context);
+    }
+  }
+}
 
+// Adjacent sibling margins
+
+@mixin doubly($margin: 1em) {
+  & + & {
+   margin-left: $margin;
+   @content;
+  }
+}
 
 
 

@@ -1,0 +1,32 @@
+// ==========================================================================
+// 		Container
+// ==========================================================================
+
+// Center elements
+
+.centered {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// base container
+.container {
+	@extend .centered;
+	color: palette(grey);
+  	font-size: $base__font-size;
+  	font-family: $font-family--primary;
+  	line-height: ($base__line-height * $base__font-size);
+	padding: 35px;
+	 p {
+  		font-size: $base__font-size;
+		font-weight: $font-weight--light;
+		@include mq(medium) {
+			font-size: em(26px);
+		}
+
+	}
+	@include mq(large) {
+		max-width: $pg-max-w;
+	}
+}

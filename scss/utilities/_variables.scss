@@ -5,8 +5,8 @@
 // ===============Fonts ==========================
 
 //	 	Font stack
-
-$font-family--primary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-url--google      : 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+$font-family--primary  : Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // 		Font weights
 
@@ -17,7 +17,7 @@ $font-weight--bold       : 700;
 $font-weight--ultra-bold : 900;
 
 //		Font size
-$base__font-size	: 18px;
+$base__font-size	: 20px;
 $base__line-height	: 1.5;
 
 // =================Colors========================
@@ -110,6 +110,9 @@ $g-gutter-width : 20px;
 $g-col-count    : 12;
 $g-cont-max-w   : 1200px;
 
+// ============== Page Width =======================
+
+$pg-max-w	: 1300px;
 
 
 
