@@ -2,18 +2,24 @@
 //		Butttons 		  						//
 //////////////////////////////////////////////////
 
-.btn {
+// color buttons when theme__colors class is included
+.theme__colors.btn {
   @include ui-colors($ui-colors);
 }
 
+// select any class with beginning of btn--
 [class^="btn--"] {
  	@extend %button;
+	width: 100%; 
  	margin-bottom: em(20px, 14px);
 	border-radius: $border--rounded-corners;
-	text-transform: capitalize;
+	text-transform: capitalize;  // 	Capitalize first letter of each word
+	transition: box-shadow $trns--duration-slow;
+	&:hover {
+		box-shadow: 0 0 28px 0 rgba($black, .5) inset;
+	}
 	@include mq(medium) {
-		margin-left: 20px;
-		margin-right: 20px;
+		@include margin-left-right(20px);
 		width: 155px;
 	}
 }

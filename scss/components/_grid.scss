@@ -2,21 +2,28 @@
 // 		Grid system
 // ==========================================================================
 
+// Center elements
+
+.centered {
+	@include mq(medium) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+// Create grid rows
 .grid {
-	&__row {
-		padding-top: 15px;
-		padding-bottom: 15px;
-		@include container-flex;
+	&__row {		// .grid__row
+		@include pad-top-bottom(15px);
+		@include container-flex-between;
 		@extend %clearfix;
 		@extend .centered;
 		width: 100%;
 
-
-		// Make nested grid container 100%
-		[class*="grid__col--"] > & {
-			width: 100%;
+		&--12 {		// .grid__row--12
+			@include pad-left-right(15px);
 		}
-
 		// Set max-width for grid container
 		@include mq(large) {
 			max-width: $g-cont-max-w;
@@ -26,7 +33,7 @@
 
 
 
-
+// create grid columns
 .grid__col {
 	@include mq(medium) {
 		@include g-columns;
@@ -34,20 +41,17 @@
 }
 
 // Column styles
-
+	// Select any class beginning with grid__col--
 [class^="grid__col--"] {
-
-	min-height: 55px;
 	@include mq(small)  { 
-		margin-top: em(12px);
-		margin-bottom: em(12px);
-		
+		@include margin-top-bottom(em(12px));
 	}
+	
 	@include mq(medium) { 
 		@include doubly(percentage($g-gutter-width / $context));
+		@include pad-left-right(10px);
 		min-height: 1px;
-		padding-left: 10px;
-		padding-right: 10px;
+		border-radius: $border--rounded-corners;
 
 	}
 }
@@ -57,6 +61,8 @@
 	@include grid-colors($grid-colors);
 }
 
-
-
+// style cards
+.card {
+	max-width: 800px;	
+}
 

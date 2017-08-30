@@ -3,10 +3,24 @@
 //////////////////////////////////////////////////
 
 
-// logo image
 .img {
-	@include m(logo) {
-		@include img-center;
-		margin-bottom: 30px;
+	@include m(logo) {		// .img--logo
+		@extend %img--center;
+		margin-bottom: 20px;
+	}
+	
+	@include m(avatar) {	// .img-avatar
+		@extend %img--center;
+		border-radius: $border--round;
+		@include mq(small) {
+			height: 150px;
+			width: 150px;
+		}
+	}	
+	
+	@include m(frame) {		// .img-frame
+		@extend %img--center;
+		margin-bottom: 20px;
 	}
 }
+

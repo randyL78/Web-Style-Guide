@@ -16,22 +16,15 @@
   }
 }
 
-// ============= Image mixins =====================
-
-@mixin img-center {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 // ============= Flexbox Settings =================
-@mixin 	container-flex {
-	display: flex;
-	flex-direction: column;
-	@include mq(medium) {
-		flex-direction: row;
-		justify-content:space-between;
-	}
+
+@mixin 	container-flex-end {
+	@extend %container-flex; 
+	justify-content: flex-end;
+}
+@mixin 	container-flex-between {
+	@extend %container-flex; 
+	justify-content: flex-end;
 }
 
 
@@ -106,7 +99,50 @@
   }
 }
 
+// ============= Generic Helper Mixins ============
 
+//	set left and right padding in one step
+@mixin pad-left-right($left : 15px, $right: null) {
+	// $left(optional) : left padding, defaults to 15px
+	// $right(optional) : right padding, defaults to null
+	@if ($right == null) { 	// if no value is given for $right make padding equal on both sides
+		$right : $left
+	}
+	padding-left: $left;
+	padding-right: $right;
+}
 
+//	set top and bottom padding in one step
+@mixin pad-top-bottom($top : 15px, $bottom: null) {
+	// $top(optional) : top padding, defaults to 15px
+	// $bottom(optional) : bottom padding, defaults to null
+	@if ($bottom == null) {	// if no value is given for $bottom make padding equal on top and bottom
+		$bottom : $top
+	}
+	padding-top: $top;
+	padding-bottom: $bottom;
+}
 
+//	set left and right margin in one step
+@mixin margin-left-right($left : 15px, $right: null) {
+	// $left(optional) : left margin, defaults to 15px
+	// $right(optional) : right margin, defaults to null
+	@if ($right == null) { 	// if no value is given for $right make padding equal on both sides
+		$right : $left
+	}
+
+	margin-left: $left;
+	margin-right: $right;
+}
+
+//	set top and bottom margin in one step
+@mixin margin-top-bottom($top : 15px, $bottom: null) {
+	// $top(optional) : top margin, defaults to 15px
+	// $bottom(optional) : bottom margin in pixels, defaults to null
+	@if ($bottom == null) {	// if no value is given for $bottom make margin equal on top and bottom
+		$bottom : $top
+	}
+	margin-top: $top;
+	margin-bottom: $bottom;
+}
 

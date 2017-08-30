@@ -3,14 +3,15 @@
 //////////////////////////////////////////////////
 
 // Set box sizing to include border and margin when calculating dimensions
+
 * {
 	box-sizing: border-box;
 }
+
+// Remove bullets from unoredered lists
 
 ul {
 	list-style-type: none;
 	padding-left: 0;
 }
-
-
 

@@ -2,6 +2,31 @@
 //			Typography  						//
 //////////////////////////////////////////////////
 
+// =============== Base Container Typography =====
+// Base container
+.container {
+	@extend .centered;
+	color: palette(grey);
+  	font-size: $base__font-size;
+  	font-family: $font-family--primary;
+  	line-height: ($base__line-height * $base__font-size);
+	padding: 20px 35px;
+	 p {
+		@include pad-left-right();
+  		font-size: $base__font-size;
+		font-weight: $font-weight--light;
+		@include mq(medium) {
+			font-size: em(26px);
+			
+		}
+
+	}
+	@include mq(large) {
+		max-width: $pg-max-w;
+	}
+}
+
+
 
 // =============== Headlines ======================
 
@@ -10,7 +35,7 @@
 		@extend %hdln-prim;
 		+ p {
 			font-size: $base__font-size;
-			font-weight: 500;
+			font-weight: $font-weight--medium;
 		}
 	}
 		&--secondary {
@@ -18,8 +43,24 @@
 	}
 }
 
+// =============== Links =========================
+
 .link {
 	color: $color-secondary;
-	text-decoration: none;
+	text-decoration: none; 	//  remove underlines
 }
 
+// =============== Blockquotes ====================
+
+.blockquote {
+	@include margin-left-right(15px, 35px);
+	margin-top: 30px;
+	padding-left: 15px;
+	font-weight: $font-weight--bold;
+	font-style: italic;
+	border-left: 15px solid $color-primary;
+	border-radius: 15px;
+	@include mq(medium) {
+		max-width: 600px;
+	}
+}

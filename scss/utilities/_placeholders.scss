@@ -22,13 +22,24 @@
 }
 
 
+// 		Screen reader text
+
+%srt {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
 // =============== Buttons ======================
 
 %button {
 	@extend %center-align;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	width: 100%;
+ 	@include pad-top-bottom(10px);
 	border: 0;
 	color: $white;
 }
@@ -36,19 +47,26 @@
 // =============== Links ========================
 
 %links {
-	text-decoration: none;
+	text-decoration: none;  //	Remove Underlines
 	color: $color-secondary;
 }
 
 // =============== Images =======================
+
+%img--center {
+	display: block;
+	@include margin-left-right(auto);
+}
+
 // =============== Headlines ====================
 
 %hdln-prim {
 	@extend %center-align;
 	color: $color-primary;
-  	font-weight: $font-weight--medium;
+  	font-weight: $font-weight--bold;
   	font-size: em(36px);
-  	line-height: ($base__line-height *.8);
+	letter-spacing: em(1px);
+	line-height: ($base__line-height *.8);
   	margin-top: 0;
 	@include mq(medium) {
 		text-align: left;
@@ -59,7 +77,7 @@
 %hdln-sec {
   	color: palette(grey, medium);
   	font-weight: $font-weight--light;
-	font-size: em(20px);
+	font-size: em(22px);
 	margin-bottom: 15px;
 }
 
@@ -74,8 +92,8 @@
 }
 
 %nav-item-link {
-  	font-weight: $font-weight--light;
-  	text-align: center;
+  	font-weight: $font-weight--medium;
+  	@extend %center-align;
   	font-size: em(20px);
   	display: block;
 	height:  54px;
@@ -83,11 +101,9 @@
 	border-radius: $border--rounded-corners;
 
   	@include mq(small) {
-    	padding-top: em(12px, 20px);
-    	padding-bottom: em(12px, 20px);
+    	@include pad-top-bottom(em(12px, 20px));
+		@include margin-left-right(auto);
 		width: 200px;
-		margin-left: auto;
-		margin-right: auto;
   	}
 }
 
@@ -95,11 +111,18 @@
 	font-weight: $font-weight--medium;
 	background-color: $color-primary;
 	color: $white;
-  	padding: em(10px) em(11.75px); // adjust padding for increased font weight
-	
+ 	
 }
 
+//	============= Flex Box ========================
 
+%container-flex {
+	display: flex;
+	flex-direction: column;
+	@include mq(medium) {
+		flex-direction: row;
+	}
+}
 
 
 

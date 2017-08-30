@@ -1,0 +1,50 @@
+ //////////////////////////////////////////////////
+//		Form layout								//
+//////////////////////////////////////////////////
+
+.form {
+	@include e(label) { 	//.form__label
+		@include m(hidden) { 	//.form__label--hidden
+			@extend %srt;		// hide labels but still accessible for screen readers
+		}
+		display: block;
+		margin-bottom: em(10px);
+	}
+
+	@include e(input) {		//.form__input
+		font-family: $font-family--primary;
+		font-size : em(18px);
+		font-weight: $font-weight--light;
+		
+		width: 90%;
+		height: 55px;
+		margin-top: em(28px, 18px);
+		border: 0;			// remove default input styling
+		border-bottom: $border--theme;
+		border-radius: $border--rounded-corners;
+		background: $white;
+		transition: border $trns--duration-fast;
+		@extend %img--center;
+			
+		&:focus {	
+			border: $border--theme;
+			border-color: $color-secondary;
+		}
+		
+
+	}
+
+
+	button {				//.form button
+		margin-top: em(28px, 18px);
+		@extend %img--center;
+	}
+	
+	img {					//.form img
+		max-width: 150px;
+		@include mq(medium) {
+			margin-top: 35px;
+		}
+	}
+}
+

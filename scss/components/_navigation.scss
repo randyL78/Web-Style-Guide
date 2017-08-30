@@ -3,19 +3,24 @@
 //////////////////////////////////////////////////
 
 .nav {
-	margin-top: 20px;
-	margin-bottom: 40px;
-	@include container-flex;
-  	@include e(item) {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	@include container-flex-end; // move nav buttons to right on medium screens and above 
+
+  	@include e(item) {  // nav__item 
     	@extend %nav-item-horz;
 
-   		 a {
-			text-decoration: none;
-     		@extend %nav-item-link;
-     		color: palette(grey);
-      		&:hover {
-        		@extend %nav-item-on;
-      		}
+		a {			// .nav a
+			text-decoration: none;  // get rid of underlines
+			@extend %nav-item-link;
+			color: palette(grey, light);
+			transition: all $trns--duration-fast;
+			&:hover {
+				@extend %nav-item-on;
+			}
+			@include mq(medium) {
+				margin-left: 35px; // put some space between nav buttons in medium and above
+			}
     	}
   	}
 }

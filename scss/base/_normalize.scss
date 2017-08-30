@@ -1,13 +1,13 @@
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
-/* Document
-   ========================================================================== */
+//* Document
+//   ========================================================================== */
 
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
- */
+//**
+// * 1. Correct the line height in all browsers.
+// * 2. Prevent adjustments of font size after orientation changes in
+// *    IE on Windows Phone and in iOS.
+// */
 
 html {
   line-height: 1.15; /* 1 */
@@ -15,20 +15,20 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
-/* Sections
-   ========================================================================== */
+//* Sections
+//   ========================================================================== */
 
-/**
- * Remove the margin in all browsers (opinionated).
- */
+//**
+// * Remove the margin in all browsers (opinionated).
+// */
 
 body {
   margin: 0;
 }
 
-/**
- * Add the correct display in IE 9-.
- */
+//**
+// * Add the correct display in IE 9-.
+// */
 
 article,
 aside,
@@ -39,23 +39,23 @@ section {
   display: block;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
+//**
+// * Correct the font size and margin on `h1` elements within `section` and
+// * `article` contexts in Chrome, Firefox, and Safari.
+// */
 
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/* Grouping content
-   ========================================================================== */
+//* Grouping content
+//  ========================================================================== */
 
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in IE.
- */
+//**
+// * Add the correct display in IE 9-.
+// * 1. Add the correct display in IE.
+// */
 
 figcaption,
 figure,
@@ -63,18 +63,18 @@ main { /* 1 */
   display: block;
 }
 
-/**
- * Add the correct margin in IE 8.
- */
+//**
+// * Add the correct margin in IE 8.
+// */
 
 figure {
   margin: 1em 40px;
 }
 
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
+//**
+// * 1. Add the correct box sizing in Firefox.
+// * 2. Show the overflow in Edge and IE.
+// */
 
 hr {
   box-sizing: content-box; /* 1 */
@@ -82,33 +82,33 @@ hr {
   overflow: visible; /* 2 */
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
+//**
+// * 1. Correct the inheritance and scaling of font size in all browsers.
+// * 2. Correct the odd `em` font sizing in all browsers.
+// */
 
 pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
-/* Text-level semantics
-   ========================================================================== */
+//* Text-level semantics
+//  ========================================================================== */
 
-/**
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
- */
+//**
+// * 1. Remove the gray background on active links in IE 10.
+// * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+// */
 
 a {
   background-color: transparent; /* 1 */
   -webkit-text-decoration-skip: objects; /* 2 */
 }
 
-/**
- * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
+//**
+// * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+// * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+// */
 
 abbr[title] {
   border-bottom: none; /* 1 */
@@ -116,28 +116,28 @@ abbr[title] {
   text-decoration: underline dotted; /* 2 */
 }
 
-/**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
- */
+//**
+// * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+// */
 
 b,
 strong {
   font-weight: inherit;
 }
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
+//**
+// * Add the correct font weight in Chrome, Edge, and Safari.
+// */
 
 b,
 strong {
   font-weight: bolder;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
+//**
+// * 1. Correct the inheritance and scaling of font size in all browsers.
+// * 2. Correct the odd `em` font sizing in all browsers.
+// */
 
 code,
 kbd,
@@ -146,35 +146,35 @@ samp {
   font-size: 1em; /* 2 */
 }
 
-/**
- * Add the correct font style in Android 4.3-.
- */
+//**
+// * Add the correct font style in Android 4.3-.
+// */
 
 dfn {
   font-style: italic;
 }
 
-/**
- * Add the correct background and color in IE 9-.
- */
+//**
+// * Add the correct background and color in IE 9-.
+// */
 
 mark {
   background-color: #ff0;
   color: #000;
 }
 
-/**
- * Add the correct font size in all browsers.
- */
+//**
+// * Add the correct font size in all browsers.
+// */
 
 small {
   font-size: 80%;
 }
 
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
+//**
+// * Prevent `sub` and `sup` elements from affecting the line height in
+// * all browsers.
+// */
 
 sub,
 sup {
@@ -192,50 +192,50 @@ sup {
   top: -0.5em;
 }
 
-/* Embedded content
-   ========================================================================== */
+//* Embedded content
+//   ========================================================================== */
 
-/**
- * Add the correct display in IE 9-.
- */
+//**
+// * Add the correct display in IE 9-.
+// */
 
 audio,
 video {
   display: inline-block;
 }
 
-/**
- * Add the correct display in iOS 4-7.
- */
+//**
+// * Add the correct display in iOS 4-7.
+// */
 
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/**
- * Remove the border on images inside links in IE 10-.
- */
+//**
+// * Remove the border on images inside links in IE 10-.
+// */
 
 img {
   border-style: none;
 }
 
-/**
- * Hide the overflow in IE.
- */
+//**
+// * Hide the overflow in IE.
+// */
 
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* Forms
-   ========================================================================== */
+//* Forms
+//   ========================================================================== */
 
-/**
- * 1. Change the font styles in all browsers (opinionated).
- * 2. Remove the margin in Firefox and Safari.
- */
+//**
+// * 1. Change the font styles in all browsers (opinionated).
+// * 2. Remove the margin in Firefox and Safari.
+// */
 
 button,
 input,
@@ -248,20 +248,20 @@ textarea {
   margin: 0; /* 2 */
 }
 
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
+//**
+// * Show the overflow in IE.
+// * 1. Show the overflow in Edge.
+// */
 
 button,
 input { /* 1 */
   overflow: visible;
 }
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
+//**
+// * Remove the inheritance of text transform in Edge, Firefox, and IE.
+// * 1. Remove the inheritance of text transform in Firefox.
+// */
 
 button,
 select { /* 1 */
@@ -445,4 +445,13 @@ template {
 [hidden] {
   display: none;
 }
+
+/*  ========================================================================== 
+			End of normalize.scss  
+========================================================================== */
+
+
+
+
+
 
