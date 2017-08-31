@@ -16,8 +16,7 @@
   		font-size: $base__font-size;
 		font-weight: $font-weight--light;
 		@include mq(medium) {
-			font-size: em(26px);
-			
+			font-size: em(26px);		
 		}
 
 	}

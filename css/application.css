@@ -406,7 +406,8 @@ ul {
       height: 150px;
       width: 150px; } }
 .img--frame {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  max-width: 100%; }
 
 .theme__colors.btn--default {
   background-color: #47DEFF; }
@@ -480,7 +481,7 @@ ul {
     text-decoration: none;
     color: #868686;
     transition: all 0.4s; }
-    @media (min-width: 769px) {
+    @media (min-width: 1100px) {
       .nav__item a {
         margin-left: 35px; } }
 

@@ -21,6 +21,8 @@
 	@include m(frame) {		// .img-frame
 		@extend %img--center;
 		margin-bottom: 20px;
+		max-width: 100%;
 	}
+	
 }
 

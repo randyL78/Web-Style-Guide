@@ -18,7 +18,7 @@
 			&:hover {
 				@extend %nav-item-on;
 			}
-			@include mq(medium) {
+			@include mq(large) {
 				margin-left: 35px; // put some space between nav buttons in medium and above
 			}
     	}
