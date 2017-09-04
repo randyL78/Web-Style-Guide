@@ -96,6 +96,9 @@
     	display: inline-block;
     	margin: 0;
   	}
+	@include mq(large) {
+//		@include pad-left-right(em(100px));
+  	}
 }
 
 %nav-item-link {
@@ -104,14 +107,16 @@
   	font-size: em(20px);
   	display: block;
 	height:  54px;
-  	padding: em(10px) em(12px);
+  	padding: em(10px) em(22px);
 	border-radius: $border--rounded-corners;
 
   	@include mq(small) {
     	@include pad-top-bottom(em(12px, 20px));
 		@include margin-left-right(auto);
-		width: 200px;
   	}
+	@include mq(large) {
+		display: inline-block;
+	}
 }
 
 %nav-item-on {
