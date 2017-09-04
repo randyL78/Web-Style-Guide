@@ -5,12 +5,13 @@
 .nav {
 	margin-top: 10px;
 	margin-bottom: 10px;
-	@include container-flex-end; // move nav buttons to right on medium screens and above 
+	@include container-flex-center; // move nav buttons to center on medium screens and above 
 
   	@include e(item) {  // nav__item 
     	@extend %nav-item-horz;
 
-		a {			// .nav a
+		a {			// .nav__item a
+			width: 100%;
 			text-decoration: none;  // get rid of underlines
 			@extend %nav-item-link;
 			color: palette(grey, light);
@@ -18,9 +19,7 @@
 			&:hover {
 				@extend %nav-item-on;
 			}
-			@include mq(large) {
-				margin-left: 35px; // put some space between nav buttons in medium and above
-			}
     	}
+
   	}
 }

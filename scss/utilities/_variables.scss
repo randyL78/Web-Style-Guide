@@ -17,7 +17,7 @@ $font-weight--bold       : 700;
 $font-weight--ultra-bold : 900;
 
 //		Font size
-$base__font-size	: 20px;
+$base__font-size	: 18px;
 $base__line-height	: 1.5;
 
 // =================Colors========================
@@ -31,19 +31,22 @@ $grey	: #676767;
 //		Theme colors
 //			-color names chosen using "name that color" @ http://chir.ag/projects/name-that-color
 
-$pink-salmon		: #ff8f93;
-$mauve				: #BD9CFF;
-$lavender			: #CE86E9;
+$sunglo				: #E4757A;
+$mauve				: #927BC1;
+$lavender			: #DEB2EE;
 $harvest-gold		: #E0B47C;
-$granny-smith		: #9DE997;
-$chetwode-blue		: #838EDC;
+$granny-smith		: #88d9a0;
+$shakespeare		: #3FABCA;
 $copperfield		: #D9856D;
 $neptune			: #78C0AB;
-$de-york			: #78C58F;
-$malibu				: #47DEFF;
+$emerald			: #63CC82;
+$malibu				: #51DDFC;
 $turqouise			: #50E3C2;
-$mantis				: #7FD079;
-$vivid-tangerine	: #FF9C7E;
+$riptide			: #80E8D1;
+$coral				: #FD7856;
+$anakiwa			: #7EE6FD;
+$sea-pink			: #EC9FA3;
+$vivid-tangerine	: #fd9f85;
 
 //		Colors by usage
 
@@ -67,27 +70,27 @@ $color-palettes: (
 
 $ui-colors: (
  	default : $color-secondary,
-  	success : $de-york,
-  	error   : $pink-salmon,
-  	warning : $vivid-tangerine,
+  	success : $emerald,
+  	error   : $sunglo,
+  	warning : $coral,
   	info    : $mauve
 );
 
 //	Grid Colors
 
 $grid-colors: (
-	$pink-salmon,	
+	$sunglo,	
 	$mauve,				
 	$lavender,			
-	$harvest-gold,		
+	$anakiwa,		
 	$granny-smith,		
-	$chetwode-blue,		
-	$copperfield,		
-	$neptune,			
-	$de-york,			
+	$shakespeare,		
+	$sea-pink,		
+	$vivid-tangerine,			
+	$emerald,			
 	$malibu,
 	$turqouise,			
-	$mantis				
+	$riptide				
 );
 
 // ============= Borders ===========================
@@ -113,7 +116,7 @@ $g-cont-max-w   : 1200px;
 
 // ============== Page Width =======================
 
-$pg-max-w	: 1300px;
+$pg-max-w	: 1200px;
 
 // ============== CSS Transitions ===================
 

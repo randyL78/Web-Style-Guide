@@ -10,16 +10,14 @@
 // select any class with beginning of btn--
 [class^="btn--"] {
  	@extend %button;
-	width: 100%; 
  	margin-bottom: em(20px, 14px);
-	border-radius: $border--rounded-corners;
-	text-transform: capitalize;  // 	Capitalize first letter of each word
+	text-transform: uppercase;  // 	Capitalize first letter of each word
 	transition: box-shadow $trns--duration-slow;
 	&:hover {
 		box-shadow: 0 0 28px 0 rgba($black, .5) inset;
 	}
 	@include mq(medium) {
 		@include margin-left-right(20px);
-		width: 155px;
+		width: 175px;
 	}
 }

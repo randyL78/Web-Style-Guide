@@ -24,9 +24,17 @@
 }
 @mixin 	container-flex-between {
 	@extend %container-flex; 
-	justify-content: flex-end;
+	justify-content: space-between;
+}
+@mixin 	container-flex-center {
+	@extend %container-flex; 
+	justify-content: center;
 }
 
+@mixin 	container-flex-around {
+	@extend %container-flex; 
+	justify-content: space-around;
+}
 
 // ============= Themed color classes =============
 
@@ -47,7 +55,12 @@
 	@each $color in $map {
 		@include e("col--#{$i}") {
       		background-color: $color;
-			@extend %button;
+//			@extend %button;
+			color: $grey;
+			text-align: left;
+			@include mq(medium) {
+				text-align: center;
+			}
     	}
 		$i : $i + 1;
   	}

@@ -22,7 +22,8 @@
 		width: 100%;
 
 		&--12 {		// .grid__row--12
-			@include pad-left-right(15px);
+			@include pad-left-right(5px);
+			@include container-flex-between;
 		}
 		// Set max-width for grid container
 		@include mq(large) {
@@ -43,16 +44,12 @@
 // Column styles
 	// Select any class beginning with grid__col--
 [class^="grid__col--"] {
-	@include mq(small)  { 
-		@include margin-top-bottom(em(12px));
-	}
-	
+	border-radius: $border--rounded-corners;
+	padding: em(8px) em(10px);
+	@include margin-top-bottom(em(5px));
 	@include mq(medium) { 
 		@include doubly(percentage($g-gutter-width / $context));
-		@include pad-left-right(10px);
 		min-height: 1px;
-		border-radius: $border--rounded-corners;
-
 	}
 }
 
@@ -61,8 +58,5 @@
 	@include grid-colors($grid-colors);
 }
 
-// style cards
-.card {
-	max-width: 800px;	
-}
+
 

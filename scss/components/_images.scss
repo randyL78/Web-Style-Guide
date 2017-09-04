@@ -12,16 +12,14 @@
 	@include m(avatar) {	// .img-avatar
 		@extend %img--center;
 		border-radius: $border--round;
-		@include mq(small) {
-			height: 150px;
-			width: 150px;
-		}
 	}	
 	
 	@include m(frame) {		// .img-frame
 		@extend %img--center;
 		margin-bottom: 20px;
 		max-width: 100%;
+		padding: 10px;
+		border: 1px palette(grey, x-light) solid;
 	}
 	
 }
