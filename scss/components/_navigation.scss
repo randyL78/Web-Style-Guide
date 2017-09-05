@@ -6,7 +6,11 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 	@include container-flex-center; // move nav buttons to center on medium screens and above 
-
+	@include mq(medium) {
+		@include margin-top-bottom(18px);
+		
+	}
+	
   	@include e(item) {  // nav__item 
     	@extend %nav-item-horz;
 
